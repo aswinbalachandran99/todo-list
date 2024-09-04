@@ -3,8 +3,43 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    <display-name>Todo List Web Application</display-name>
     <welcome-file-list>
-        <welcome-file>todo</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+
+    <servlet>
+        <servlet-name>AddTodoServlet</servlet-name>
+        <servlet-class>com.example.servlet.AddTodoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddTodoServlet</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteTodoServlet</servlet-name>
+        <servlet-class>com.example.servlet.DeleteTodoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteTodoServlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ListTodosServlet</servlet-name>
+        <servlet-class>com.example.servlet.ListTodosServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListTodosServlet</servlet-name>
+        <url-pattern>/list</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateTodoServlet</servlet-name>
+        <servlet-class>com.example.servlet.UpdateTodoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateTodoServlet</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
 </web-app>
